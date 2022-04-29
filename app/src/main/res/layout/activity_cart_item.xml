@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="ui.cart.CartItemActivity"
+    android:background="@color/blue_grey"
+    android:fitsSystemWindows="false">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="fragments.CartItemFragment"
+        android:id="@+id/viewContainer"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blue_grey">
+
+            <include layout="@layout/cart_item_layout_toolbar"
+                android:id="@+id/cartItemToolBar"/>
+
+            <RelativeLayout
+                android:id="@+id/cartItemContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cartItemToolBar"
+                android:padding="12dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/shopCartName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Shop Name"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="17sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/cartItemRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/shopCartName"
+                    android:layout_marginTop="11dp"
+                    android:overScrollMode="never"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/cartItemContainer"
+                android:background="@color/white"
+                android:layout_marginTop="13dp"
+                android:padding="12dp"
+                android:weightSum="5">
+
+                <ImageView
+                    android:id="@+id/editImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/extra_instructions"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/extraInstructionEdiText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="Any cooking instructions?"
+                    android:fontFamily="@font/open_sans"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:textColor="@color/gray"
+                    android:maxLines="2"
+                    android:layout_weight="4"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        android:id="@+id/bottomSheet"
+        android:padding="17dp"
+        android:elevation="30dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/deliveringAtText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivering at:"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/userDeliveryAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/deliveringAtText"
+            android:fontFamily="@font/open_sans"
+            android:textColor="@color/gray"
+            android:layout_marginTop="1dp"/>
+
+        <TextView
+            android:id="@+id/changeAddressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Change"
+            android:textColor="@color/colorPrimaryDark"
+            android:fontFamily="@font/open_sans_bold"
+            android:textSize="15sp"/>
+
+        <View
+            android:id="@+id/cartDivider"
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/grey"
+            android:layout_below="@+id/userDeliveryAddress"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"/>
+
+        <TextView
+            android:id="@+id/totAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cartDivider"
+            android:text="Amount Payable: "
+            android:fontFamily="@font/open_sans_semibold"
+            android:textColor="@color/colorAccent"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/amountSaved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/totAmount"
+            android:layout_marginTop="1dp"
+            android:text="You Save: "
+            android:fontFamily="@font/open_sans_semibold"
+            android:textColor="@color/colorAccent"/>
+
+        <Button
+            android:id="@+id/payAmountBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cartDivider"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/pay_button_amt"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Checkout"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

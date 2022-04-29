@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "455751132680",
+    "project_id": "waterd-4e52d",
+    "storage_bucket": "waterd-4e52d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455751132680:android:80fac89c385d6bf47353bd",
+        "android_client_info": {
+          "package_name": "com.example.adarsh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455751132680-pc25mc4kpefesb85e978qo4ftvht8klq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.adarsh",
+            "certificate_hash": "4a937139836b75d2ee1706cda6d7837c9487404a"
+          }
+        },
+        {
+          "client_id": "455751132680-l01tsmc08sqh3221qbcq5721rqm1vn6u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh4iouBFuChgygVdHXDo0gs-ASTBVN12Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455751132680-l01tsmc08sqh3221qbcq5721rqm1vn6u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

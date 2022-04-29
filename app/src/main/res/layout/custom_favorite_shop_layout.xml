@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="17dp"
+    android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="95dp"
+                android:layout_height="110dp"
+                android:layout_alignParentStart="true"
+                android:id="@+id/shopImageContainer"
+                app:cardCornerRadius="6dp">
+
+                <ImageView
+                    android:id="@+id/favShopImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/favShopName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/shopImageContainer"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="0dp"
+                android:textSize="19sp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:id="@+id/favShopCategories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/favShopName"
+                android:layout_toEndOf="@id/shopImageContainer"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="3dp"
+                android:text="Mineral Water"
+                android:fontFamily="@font/open_sans"
+                android:textSize="13sp"
+                android:textColor="@color/gray"/>
+
+            <TextView
+                android:id="@+id/favShopLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/favShopCategories"
+                android:text="Sector-2, Bhopal"
+                android:layout_toEndOf="@+id/shopImageContainer"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="3dp"
+                android:textSize="13sp"
+                android:fontFamily="@font/open_sans"/>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/darker_gray"
+                android:layout_toEndOf="@id/shopImageContainer"
+                android:layout_below="@+id/favShopLocation"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="17dp"/>
+
+            <TextView
+                android:id="@+id/favoriteShopPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/shopImageContainer"
+                android:layout_below="@+id/divider"
+                android:layout_marginStart="17dp"
+                android:fontFamily="@font/open_sans"
+                android:textSize="15sp"
+                android:textColor="@color/colorAccent"/>
+
+        </RelativeLayout>
+
+</RelativeLayout>

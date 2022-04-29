@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ui.main.MainShopPageActivity">
+
+    <include layout="@layout/main_shop_toolbar"
+        android:id="@+id/mainResToolBar"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="ui.main.MainShopPageActivity"
+        android:layout_below="@id/mainResToolBar"
+        android:id="@+id/content1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="13dp">
+
+                <TextView
+                    android:id="@+id/mainShopName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Mines Water Ltd."
+                    android:textColor="@color/colorAccent"
+                    android:textSize="19sp" />
+
+                <ImageView
+                    android:id="@+id/reviewImage"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_alignTop="@+id/reviewText"
+                    android:layout_alignBottom="@+id/reviewText"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="3dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_toStartOf="@+id/reviewText"
+                    android:src="@drawable/review" />
+
+                <TextView
+                    android:id="@+id/reviewText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="9dp"
+                    android:fontFamily="@font/open_sans"
+                    android:text="Reviews"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/mainShopCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mainShopName"
+                    android:fontFamily="@font/open_sans_light"
+                    android:text="Mineral Water Jar, Water Bottles"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/mainShopAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mainShopCategory"
+                    android:text="Sector 50  \u2022  "
+                    android:fontFamily="@font/open_sans_light"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/mainShopDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mainShopCategory"
+                    android:layout_toEndOf="@+id/mainShopAddress"
+                    android:fontFamily="@font/open_sans_light"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp"/>
+
+                <ImageView
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:src="@drawable/dotted_divider"
+                    android:layerType="software"
+                    android:layout_below="@id/mainShopDistance"
+                    android:layout_marginTop="7dp" />
+
+                <RelativeLayout
+                    android:id="@+id/specsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/divider"
+                    android:layout_marginTop="21dp">
+
+                    <TextView
+                        android:id="@+id/shopRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="17dp"
+                        android:text="\u2605 4.2"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:textColor="@color/colorAccent"/>
+
+                    <TextView
+                        android:id="@+id/shopDeliveryTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="45 mins"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorAccent"/>
+
+                    <TextView
+                        android:id="@+id/shopAvgPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="17dp"
+                        android:text="\u20b9 450"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ratings"
+                        android:layout_below="@+id/shopRating"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/open_sans_light"
+                        android:textSize="13sp"
+                        android:textColor="@color/gray"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delivery Time"
+                        android:fontFamily="@font/open_sans_light"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        android:layout_below="@id/shopDeliveryTime"
+                        android:layout_centerHorizontal="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="8dp"
+                        android:text="Per Person"
+                        android:fontFamily="@font/open_sans_light"
+                        android:textSize="13sp"
+                        android:textColor="@color/gray"
+                        android:layout_below="@+id/shopAvgPrice"/>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="21dp"
+                    android:src="@drawable/dotted_divider"
+                    android:layerType="software"
+                    android:layout_below="@+id/specsContainer"
+                    android:layout_marginTop="7dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/menuItemRecylerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/divider2"
+                    android:layout_marginTop="12dp"
+                    android:overScrollMode="never"
+                    android:layout_marginBottom="48dp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
+
+

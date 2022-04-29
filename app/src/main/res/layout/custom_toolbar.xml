@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/customToolBar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/addressContainer">
+
+            <TextView
+                android:id="@+id/userLocationNickName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delivering To"
+                android:textSize="20sp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:textColor="@color/colorAccent"/>
+
+            <TextView
+                android:id="@+id/userLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="getting location ..."
+                android:fontFamily="@font/open_sans"
+                android:textColor="@color/gray"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <ru.nikartm.support.ImageBadgeView
+            android:id="@+id/imageBadgeView"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:src="@drawable/cart_icon"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="21dp"
+            app:ibv_badgeTextSize="9sp"
+            app:ibv_fixedBadgeRadius="7dp"
+            app:ibv_badgeTextStyle="bold"
+            app:ibv_badgeTextColor="#ffffff"
+            app:ibv_badgeColor="@color/colorPrimary"
+            app:ibv_badgePosition="top_right"
+            app:ibv_maxBadgeValue="99"/>
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

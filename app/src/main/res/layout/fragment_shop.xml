@@ -1,0 +1,63 @@
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fragments.ShopsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/custom_toolbar"
+            android:id="@+id/toolBar"/>
+
+        <TextView
+            android:id="@+id/categoryTextLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolBar"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Top categories for you"
+            android:textColor="@color/colorAccent"
+            android:textSize="21sp" />
+
+        <GridView
+            android:id="@+id/categoryGridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/categoryTextLabel"
+            android:layout_marginTop="7dp"
+            android:overScrollMode="never"
+            android:numColumns="3"
+            android:verticalSpacing="1dp"
+            android:horizontalSpacing="1dp"/>
+
+        <TextView
+            android:id="@+id/trendingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/categoryGridView"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="21dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="@string/trending"
+            android:textColor="@color/colorAccent"
+            android:textSize="23sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/shop_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trendingTextView"
+            android:layout_marginTop="7dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingStart="12dp"
+            android:paddingEnd="23dp" />
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
+

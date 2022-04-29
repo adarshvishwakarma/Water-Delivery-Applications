@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ui.review.ReviewsActivity"
+    android:background="@color/blue_grey">
+
+    <include layout="@layout/simple_toolbar"
+        android:id="@+id/reviewsToolBar"/>
+
+    <RelativeLayout
+        android:id="@+id/shopReviewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reviewsToolBar"
+        android:padding="11dp"
+        android:background="@color/white"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/shopReviewText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans"
+            android:text="Mineral Water"
+            android:textColor="@color/colorAccent"
+            android:textSize="29sp" />
+
+        <TextView
+            android:id="@+id/shopReviewType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shopReviewText"
+            android:text="Mineral Water"
+            android:fontFamily="@font/open_sans"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/shopReviewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shopReviewType"
+            android:text="Cost for one - \u20b9200"
+            android:fontFamily="@font/open_sans"
+            android:textSize="15sp"
+            android:textColor="@color/gray"
+            android:layout_marginTop="3dp"/>
+
+        <ImageView
+            android:id="@+id/callShopBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/shopReviewPrice"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="7dp"
+            android:src="@drawable/call_res_lg" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shopReviewContainer"
+        android:background="@color/white">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/userReviewRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue_grey"
+            android:overScrollMode="never"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

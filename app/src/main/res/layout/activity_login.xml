@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="ui.auth.LoginActivity"
+    android:padding="28dp">
+
+    <TextView
+        android:id="@+id/textLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/raleway_black"
+        android:padding="18dp"
+        android:text="@string/app_name"
+        android:textColor="@color/colorAccent"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/textGetStarted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textLogo"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="@string/getStarted"
+        android:textColor="@color/colorAccent"
+        android:textSize="22sp"
+        android:paddingBottom="14dp"/>
+
+    <TextView
+        android:id="@+id/descLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textGetStarted"
+        android:fontFamily="@font/open_sans"
+        android:paddingBottom="28dp"
+        android:text="@string/descLogin"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="383dp"
+        android:layout_height="248dp"
+        android:layout_above="@+id/terms"
+        android:layout_below="@+id/sendOtpBtn"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="17dp"
+        android:scaleType="centerCrop"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        android:padding="20dp"
+        app:lottie_rawRes="@raw/delivery_animation" />
+
+    <TextView
+        android:id="@+id/editMobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/descLogin"
+        android:fontFamily="@font/open_sans_light"
+        android:text="@string/descMobile"
+        android:textColor="@color/colorAccent"
+        android:paddingBottom="1dp"
+        android:layout_marginTop="17dp"/>
+
+    <RelativeLayout
+        android:id="@+id/loginContainer"
+        android:layout_below="@+id/editMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/countryCodeHolder"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:ccp_textSize="18sp"
+            app:ccp_autoDetectCountry="true"
+            android:layout_centerVertical="true"/>
+
+        <EditText
+            android:id="@+id/loginInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/countryCodeHolder"
+            android:hint="@string/mobileHint"
+            android:textSize="18sp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/sendOtpBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loginContainer"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/login_btn_background"
+        android:fontFamily="@font/open_sans_semibold"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/loginBtnText"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/terms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/termsandconditions"
+        android:textAlignment="center"
+        android:textSize="13sp"
+        android:textColor="@color/colorAccent"
+        android:fontFamily="@font/open_sans"/>
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ui.order.OrdersActivity"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="ui.order.OrdersActivity"
+        android:background="@color/white">
+
+        <include layout="@layout/simple_toolbar"
+            android:id="@+id/orderedItemsToolBar"/>
+
+        <TextView
+            android:id="@+id/ordersText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orderedItemsToolBar"
+            android:layout_marginTop="11dp"
+            android:layout_marginStart="17dp"
+            android:text="@string/your_orders"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textSize="21sp"
+            android:textColor="@color/colorAccent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/orderedItemsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ordersText"
+            android:layout_marginTop="7dp"
+            android:overScrollMode="never" />
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
+

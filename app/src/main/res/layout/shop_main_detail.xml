@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        android:layout_margin="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/shopImage"
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/shop_image_placeholder"/>
+
+            <TextView
+                android:id="@+id/shopName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shopImage"
+                android:layout_marginTop="11dp"
+                android:layout_marginStart="11dp"
+                android:textSize="17sp"
+                android:textColor="@color/colorAccent"
+                android:fontFamily="@font/open_sans"/>
+
+            <TextView
+                android:id="@+id/shopCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shopName"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/open_sans"
+                android:text="Mineral Water"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shopCategory"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="5dp"
+                android:numStars="5"
+                android:rating="4"
+                android:theme="@style/RatingBar" />
+
+            <TextView
+                android:id="@+id/ratingAggregate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shopCategory"
+                android:layout_toEndOf="@+id/ratingBar"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:text="4.5"
+                android:textColor="@color/gray"
+                android:textSize="12sp"
+                android:fontFamily="@font/open_sans"/>
+
+            <TextView
+                android:id="@+id/average_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ratingBar"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/open_sans"
+                android:text="\u20B9200 per person | "
+                android:textColor="@color/gray"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/average_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ratingBar"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="11dp"
+                android:layout_toEndOf="@+id/average_price"
+                android:fontFamily="@font/open_sans"
+                android:text="45 Mins"
+                android:textColor="@color/gray"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
