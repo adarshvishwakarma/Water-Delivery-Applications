@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 rootProject.name='WaterDelivery'
+=======
+rootProject.name='Water Delivery'
+>>>>>>> 3dc27e07c843037c4343a2522b8f1bb572443271
 include ':app'
